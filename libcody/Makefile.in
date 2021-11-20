@@ -126,8 +126,8 @@ LIBCODY.O := buffer.o client.o fatal.o netclient.o netserver.o \
 all:: libcody.a
 
 libcody.a: $(LIBCODY.O)
-	$(AR) -cr $@ $^
-	$(RANLIB) $@
+	$(AR) -crD $@ $^
+	$(RANLIB) -D $@
 
 mostlyclean::
 

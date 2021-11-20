@@ -6669,7 +6669,7 @@ else
 fi
 
 test -z "$AR" && AR=ar
-test -z "$AR_FLAGS" && AR_FLAGS=cru
+test -z "$AR_FLAGS" && AR_FLAGS=crD
 
 
 

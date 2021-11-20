@@ -243,7 +243,7 @@ AR = @AR@
 AR_FLAGS = rc
 NM = @NM@
 RANLIB = @RANLIB@
-RANLIB_FLAGS = @ranlib_flags@
+RANLIB_FLAGS = @ranlib_flags@ -D
 
 # Libraries to use on the host.
 HOST_LIBS = @HOST_LIBS@

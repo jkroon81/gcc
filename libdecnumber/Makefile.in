@@ -26,7 +26,7 @@ top_builddir = .
 VPATH = @srcdir@
 INSTALL = @INSTALL@
 AR = @AR@
-ARFLAGS = cru
+ARFLAGS = crD
 ACLOCAL = @ACLOCAL@
 AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
@@ -88,7 +88,7 @@ all: libdecnumber.a
 libdecnumber.a: $(libdecnumber_a_OBJS)
 	-rm -f $@
 	$(AR) $(ARFLAGS) $@ $(libdecnumber_a_OBJS)
-	$(RANLIB) $@
+	$(RANLIB) -D $@
 
 # Rules to rebuild the configuration
 

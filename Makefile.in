@@ -416,7 +416,7 @@ MAKEINFOFLAGS = --split-size=5000000
 
 AS = @AS@
 AR = @AR@
-AR_FLAGS = rc
+AR_FLAGS = rcD
 CC = @CC@
 CXX = @CXX@
 DLLTOOL = @DLLTOOL@
@@ -23571,7 +23571,7 @@ configure-libbacktrace:
 	  $$s/$$module_srcdir/configure \
 	  --srcdir=$${topdir}/$$module_srcdir \
 	  $(HOST_CONFIGARGS) --build=${build_alias} --host=${host_alias} \
-	  --target=${target_alias}  \
+	  --target=${target_alias}  RANLIB="ranlib -D" \
 	  || exit 1
 @endif libbacktrace
 

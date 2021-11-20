@@ -252,19 +252,19 @@ $(TARGETLIB): $(REQUIRED_OFILES) $(EXTRA_OFILES) $(LIBOBJS)
 	-rm -f $(TARGETLIB) pic/$(TARGETLIB) noasan/$(TARGETLIB)
 	$(AR) $(AR_FLAGS) $(TARGETLIB) \
 	  $(REQUIRED_OFILES) $(EXTRA_OFILES) $(LIBOBJS)
-	$(RANLIB) $(TARGETLIB)
+	$(RANLIB) -D $(TARGETLIB)
 	if [ x"$(PICFLAG)" != x ]; then \
 	  cd pic; \
 	  $(AR) $(AR_FLAGS) $(TARGETLIB) \
 	    $(REQUIRED_OFILES) $(EXTRA_OFILES) $(LIBOBJS); \
-	  $(RANLIB) $(TARGETLIB); \
+	  $(RANLIB) -D $(TARGETLIB); \
 	  cd ..; \
 	else true; fi; \
 	if [ x"$(NOASANFLAG)" != x ]; then \
 	  cd noasan; \
 	  $(AR) $(AR_FLAGS) $(TARGETLIB) \
 	    $(REQUIRED_OFILES) $(EXTRA_OFILES) $(LIBOBJS); \
-	  $(RANLIB) $(TARGETLIB); \
+	  $(RANLIB) -D $(TARGETLIB); \
 	  cd ..; \
 	else true; fi
 
